@@ -130,6 +130,7 @@ func main() {
 			fmt.Print(errors)
 			return
 		}
+		fmt.Fprint(os.Stderr, errors)		// warn about unused imports (then run)
 //		fmt.Print("Running after cleaning\n")
 		goRun(gofiles)
 		remove(tmps)
